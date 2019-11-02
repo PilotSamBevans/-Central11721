@@ -88,7 +88,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             // This way it's also easy to just forward straight, or just turn.
             forward = -gamepad1.left_stick_y;
             rotation = gamepad1.left_stick_x;
-            side = gamepad1. right_stick_x;
+            side = gamepad1.right_stick_x;
 
             // Combine forward and turn for blended motion.
             leftRear = forward - side + rotation;
