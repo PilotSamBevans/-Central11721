@@ -67,6 +67,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
         double side;
         double rotation;
         double max;
+        double strafe;
 
         /* Initialize the hardware variables.
          * The init() method of the hardware class does all the work here
@@ -88,13 +89,20 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             // This way it's also easy to just forward straight, or just turn.
             forward = -gamepad1.left_stick_y;
             rotation = gamepad1.left_stick_x;
-            side = gamepad1.right_stick_x;
+            //side = gamepad1.right_stick_x;
+            strafe = gamepad1.right_stick_x;
+
 
             // Combine forward and turn for blended motion.
-            leftRear = forward - side + rotation;
-            rightRear = forward + side - rotation;
-            rightFront = forward - side - rotation;
-            leftFront = forward + side + rotation;
+            //leftRear = forward - side + rotation;
+            //rightRear = forward + side - rotation;
+            //rightFront = forward - side - rotation;
+            //leftFront = forward + side + rotation;
+
+            leftRear = forward + rotation;
+            rightRear = forward - rotation;
+            rightFront = forward - rotation;
+            leftFront = forward + rotation;
 
             // Normalize the values so neither exceed +/- 1.0
             /** Nick doesn't understand this. I'll work on it in a bit **/
@@ -110,6 +118,13 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             goat.leftRear.setPower(leftRear);
             goat.rightFront.setPower(rightFront);
             goat.rightRear.setPower(rightRear);
+
+
+
+
+
+
+
 
             if (gamepad1.left_bumper && gamepad1.right_bumper) {
                 // Do something if both bumpers are pressed down
@@ -129,6 +144,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             } else {
                 // Do something if nothing is pressed
             }
+
 
 
             // Send telemetry message to signify goat running;
