@@ -126,6 +126,7 @@ public class PushbotAutoDriveByEncoder_Linear10139 extends LinearOpMode {
         basicMecanum(1, 0, 0, 6000);
         basicMecanum(0,0,1,600);
         basicMecanum(1,0,0,2000);
+        basicMecanum(-1,0,0,2000);
 
 
     }

@@ -99,7 +99,7 @@ public class HardwarePushbot10139 {
         leftFront.setDirection(DcMotor.Direction.REVERSE);
         leftRear.setDirection(DcMotor.Direction.REVERSE);
         rightFront.setDirection(DcMotor.Direction.FORWARD);
-        rightRear.setDirection(DcMotor.Direction.FORWARD)
+        rightRear.setDirection(DcMotor.Direction.FORWARD);
         // Set all motors to zero power
         leftFront.setPower(0);
         leftRear.setPower(0);
