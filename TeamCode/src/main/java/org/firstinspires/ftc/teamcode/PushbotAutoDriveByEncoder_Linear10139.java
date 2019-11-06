@@ -123,7 +123,7 @@ public class PushbotAutoDriveByEncoder_Linear10139 extends LinearOpMode {
         telemetry.update();
         */
 
-        basicMecanum(1, 0, 0, 4000);
+        basicMecanum(1, 0, 0, 4500);
         basicMecanum(0,0,-1,500);
         basicMecanum(1,0,0,1000);
 
