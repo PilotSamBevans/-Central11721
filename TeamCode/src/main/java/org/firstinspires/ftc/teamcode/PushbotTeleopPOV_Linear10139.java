@@ -120,32 +120,15 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             goat.rightRear.setPower(rightRear);
 
 
-            
 
 
 
 
-
-
-
-            if (gamepad1.left_bumper && gamepad1.right_bumper) {
-                // Do something if both bumpers are pressed down
-            } else if (gamepad1.left_bumper) {
-                goat.rightFront.setPower(1);
-                goat.rightRear.setPower(-1);
-                goat.leftFront.setPower(1);
-                goat.leftRear.setPower(-1);
-
-                // Do something if just the left bumper is pressed
-            } else if (gamepad1.right_bumper) {
-                goat.rightFront.setPower(-1);
-                goat.rightRear.setPower(1);       
-                goat.leftFront.setPower(-1);
-                goat.leftRear.setPower(1);
-                // Do something if just the right bumper is pressed
-            } else {
-                // Do something if nothing is pressed
-            }
+                        // Strafing Left/Right
+            goat.rightFront.setPower(gamepad1.right_stick_x);
+            goat.rightRear.setPower(-gamepad1.right_stick_x);
+            goat.leftFront.setPower(gamepad1.right_stick_x);
+            goat.leftRear.setPower(-gamepad1.right_stick_x);
 
 
 
