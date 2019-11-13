@@ -89,6 +89,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             // This way it's also easy to just forward straight, or just turn.
             forward = -gamepad1.left_stick_y;
             rotation = gamepad1.left_stick_x;
+            strafe = gamepad1.right_stick_x;
             //side = gamepad1.right_stick_x;
             strafe = gamepad1.right_stick_x;
 
@@ -99,10 +100,10 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             //rightFront = forward - side - rotation;
             //leftFront = forward + side + rotation;
 
-            leftRear = forward + rotation;
-            rightRear = forward - rotation;
-            rightFront = forward - rotation;
-            leftFront = forward + rotation;
+            leftRear = forward + rotation + strafe;
+            rightRear = forward - rotation - strafe;
+            rightFront = forward - rotation + strafe;
+            leftFront = forward + rotation - strafe;
 
             // Normalize the values so neither exceed +/- 1.0
             /** Nick doesn't understand this. I'll work on it in a bit **/
@@ -118,18 +119,6 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             goat.leftRear.setPower(leftRear);
             goat.rightFront.setPower(rightFront);
             goat.rightRear.setPower(rightRear);
-
-
-
-
-
-
-                        // Strafing Left/Right
-            goat.rightFront.setPower(gamepad1.right_stick_x);
-            goat.rightRear.setPower(-gamepad1.right_stick_x);
-            goat.leftFront.setPower(gamepad1.right_stick_x);
-            goat.leftRear.setPower(-gamepad1.right_stick_x);
-
 
 
             // Send telemetry message to signify goat running;
