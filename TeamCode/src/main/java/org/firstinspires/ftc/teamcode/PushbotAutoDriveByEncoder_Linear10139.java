@@ -125,9 +125,6 @@ public class PushbotAutoDriveByEncoder_Linear10139 extends LinearOpMode {
 
         // Move forward
         basicMecanum(1, 0, 0, 4500);
-       internalOpModeServices gamepad1.right_bumper();
-
-
         // Sleep
         sleep(3000);
         //Turn left
