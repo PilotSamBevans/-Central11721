@@ -62,7 +62,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  */
 
 @Autonomous(name="Pushbot: Auto Drive By Encoder", group="Pushbot")
-public class PushbotAutoDriveByEncoder_Linear10139 extends LinearOpMode {
+public class PushbotAutoDriveByEncoder_Linear_Red10139 extends LinearOpMode {
 
     /* Declare OpMode members. */
     HardwarePushbot10139    goat = new HardwarePushbot10139();   // Use a Pushbot's hardware
