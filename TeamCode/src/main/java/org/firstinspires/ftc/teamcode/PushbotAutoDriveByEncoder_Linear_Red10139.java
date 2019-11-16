@@ -61,7 +61,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@Autonomous(name="Pushbot: Auto Drive By Encoder", group="Pushbot")
+@Autonomous(name="PushbotAutoDriveByEncoder_Linear_Red1013", group="Pushbot")
 public class PushbotAutoDriveByEncoder_Linear_Red10139 extends LinearOpMode {
 
     /* Declare OpMode members. */
@@ -126,9 +126,9 @@ public class PushbotAutoDriveByEncoder_Linear_Red10139 extends LinearOpMode {
         // Move forward
         basicMecanum(1, 0, 0, 4500);
        //Strafe Right
-       basicMecanum(0,1,0,1000);
+       basicMecanum(0,-1,0,1000);
        //Turn left
-        basicMecanum(0,0,-1,600);
+        basicMecanum(0,0,1,800);
         //move forward
         basicMecanum(1,0,0,3000);
 
