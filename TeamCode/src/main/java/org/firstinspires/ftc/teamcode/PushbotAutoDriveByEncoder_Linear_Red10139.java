@@ -125,9 +125,9 @@ public class PushbotAutoDriveByEncoder_Linear_Red10139 extends LinearOpMode {
 
         // Move forward
         basicMecanum(1, 0, 0, 4500);
-       //Strafe Right
+       //Strafe Left
        basicMecanum(0,-1,0,500);
-       //Turn left
+       //Turn Right
         basicMecanum(0,0,1,800);
         //move forward
         basicMecanum(1,0,0,3000);
