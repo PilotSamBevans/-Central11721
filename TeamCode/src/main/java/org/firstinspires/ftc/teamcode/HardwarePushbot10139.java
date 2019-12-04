@@ -51,7 +51,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * For use with 10139 SKYSTONE Season
  */
 
-public class HardwarePushbot10139 {
+public class HardwarePushbot10139
 
     /*
      * Declare the members used
@@ -63,7 +63,7 @@ public class HardwarePushbot10139 {
     public DcMotor  leftRear    = null;
     public DcMotor  rightFront  = null;
     public DcMotor  rightRear   = null;
-   //this is an example servo declaration. If you add a servo, uncomment this (Remove the slashes)
+    //this is an example servo declaration. If you add a servo, uncomment this (Remove the slashes)
 //  public Servo    leftClaw    = null;
 
     // These are not used at the moment because of the lack of servos
