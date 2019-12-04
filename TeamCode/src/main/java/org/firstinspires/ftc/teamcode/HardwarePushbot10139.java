@@ -63,8 +63,8 @@ public class HardwarePushbot10139 {
     public DcMotor  leftRear    = null;
     public DcMotor  rightFront  = null;
     public DcMotor  rightRear   = null;
-    // This is an example servo declaration. If you add a servo, uncomment this (Remove the slashes)
-//    public Servo    leftClaw    = null;
+   //this is an example servo declaration. If you add a servo, uncomment this (Remove the slashes)
+//  public Servo    leftClaw    = null;
 
     // These are not used at the moment because of the lack of servos
     // Uncomment them or copy them with other values when using servos
@@ -113,9 +113,8 @@ public class HardwarePushbot10139 {
         rightFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightRear.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        // Define and initialize ALL installed servos.
-//        leftClaw  = hwMap.get(Servo.class, "left_hand");
-//        leftClaw.setPosition(MID_SERVO);
+
+//
 
 
 
