@@ -51,7 +51,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * For use with 10139 SKYSTONE Season
  */
 
-public class HardwarePushbot10139
+public class HardwarePushbot10139{
 
     /*
      * Declare the members used
