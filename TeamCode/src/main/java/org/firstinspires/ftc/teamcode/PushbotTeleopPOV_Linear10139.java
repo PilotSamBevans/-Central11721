@@ -131,7 +131,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             if (gamepad1.left_bumper)
                 goat.clawGrip.setPosition(0);
             else if (gamepad1.right_bumper)
-                goat.clawGrip.setPosition(30);
+                goat.clawGrip.setPosition(1);
 
             // Pace this loop so jaw action is reasonable speed.
             sleep(50);
