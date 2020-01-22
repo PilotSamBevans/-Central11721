@@ -31,6 +31,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
@@ -63,8 +64,7 @@ public class HardwarePushbot10139{
     public DcMotor  leftRear    = null;
     public DcMotor  rightFront  = null;
     public DcMotor  rightRear   = null;
-    //this is an example servo declaration. If you add a servo, uncomment this (Remove the slashes)
-//  public Servo    leftClaw    = null;
+    public Servo    clawGrip   =  null;
 
     // These are not used at the moment because of the lack of servos
     // Uncomment them or copy them with other values when using servos
@@ -90,6 +90,7 @@ public class HardwarePushbot10139{
         leftRear = hwMap.get(DcMotor.class, "left_rear");
         rightFront  = hwMap.get(DcMotor.class, "right_front");
         rightRear = hwMap.get(DcMotor.class, "right_rear");
+        clawGrip = hwMap.get(Servo.class, "claw_grip");
 
 
         /*
@@ -100,11 +101,16 @@ public class HardwarePushbot10139{
         leftRear.setDirection(DcMotor.Direction.REVERSE);
         rightFront.setDirection(DcMotor.Direction.FORWARD);
         rightRear.setDirection(DcMotor.Direction.FORWARD);
+        clawGrip.setDirection(Servo.Direction.FORWARD);
+
         // Set all motors to zero power
         leftFront.setPower(0);
         leftRear.setPower(0);
         rightFront.setPower(0);
         rightRear.setPower(0);
+        clawGrip.setPosition (0);
+
+
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
@@ -112,6 +118,7 @@ public class HardwarePushbot10139{
         leftRear.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightFront.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightRear.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
 
 
 //
