@@ -68,6 +68,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
         double rotation;
         double max;
         double strafe;
+        boolean clawGrip_left;
 
         /* Initialize the hardware variables.
          * The init() method of the hardware class does all the work here
@@ -92,6 +93,8 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             strafe = gamepad1.right_stick_x;
             //side = gamepad1.right_stick_x;
             strafe = gamepad1.right_stick_x;
+            clawGrip_left = gamepad1.left_bumper;
+
 
 
             // Combine forward and turn for blended motion.
@@ -126,6 +129,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             telemetry.addData("right Rear", "%.2f", rightRear);
             telemetry.addData("right Front", "%.2f", rightFront);
             telemetry.addData("left Front", "%.2f",  leftFront);
+            //telemetry.addData("left bumper", "", boolean.tostring(clawGrip_left));
             telemetry.update();
 
             if (gamepad1.left_bumper)
