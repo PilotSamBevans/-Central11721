@@ -128,6 +128,11 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             telemetry.addData("left Front", "%.2f",  leftFront);
             telemetry.update();
 
+            if (gamepad1.left_bumper)
+                goat.clawGrip.setPosition(0);
+            else if (gamepad1.right_bumper)
+                goat.clawGrip.setPosition(30);
+
             // Pace this loop so jaw action is reasonable speed.
             sleep(50);
         }
