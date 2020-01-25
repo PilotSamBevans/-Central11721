@@ -129,7 +129,10 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             telemetry.addData("right Rear", "%.2f", rightRear);
             telemetry.addData("right Front", "%.2f", rightFront);
             telemetry.addData("left Front", "%.2f",  leftFront);
-            //telemetry.addData("left bumper", "", boolean.tostring(clawGrip_left));
+            if(clawGrip_left)
+                telemetry.addData("left bumper", "%S", "Pressed");
+            else
+                telemetry.addData("Left Bumper", "%s","Not Pressed");
             telemetry.update();
 
             if (gamepad1.left_bumper)
