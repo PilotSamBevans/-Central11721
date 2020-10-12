@@ -76,7 +76,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
         goat.init(hardwareMap);
 
         // Send telemetry message to signify goat waiting;
-        telemetry.addData("Say", "Goat (Greatest Of All Times");    //
+        telemetry.addData("Say", "Goat (Sam is Awesome!");    //
         telemetry.update();
 
         // Wait for the game to start (driver presses PLAY)
