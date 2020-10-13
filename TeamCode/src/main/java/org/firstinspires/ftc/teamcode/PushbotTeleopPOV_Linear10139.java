@@ -98,14 +98,14 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
 
 
             // Combine forward and turn for blended motion.
-            //leftRear = forward - side + rotation;
+            //hggleftRear = forward - side + rotation;
             //rightRear = forward + side - rotation;
             //rightFront = forward - side - rotation;
             //leftFront = forward + side + rotation;
 
             leftRear = forward + rotation - strafe;
-            rightRear = forward + rotation + strafe;
-            rightFront = forward - rotation - strafe;
+            rightRear = forward + rotation - strafe;
+            rightFront = forward - rotation + strafe;
             leftFront = forward - rotation + strafe;
 
             // Normalize the values so neither exceed +/- 1.0
