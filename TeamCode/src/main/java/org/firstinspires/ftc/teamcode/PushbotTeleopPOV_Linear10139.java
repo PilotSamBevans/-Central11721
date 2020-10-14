@@ -98,15 +98,15 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
 
 
             // Combine forward and turn for blended motion.
-            //hggleftRear = forward - side + rotation;
+            //leftRear = forward - side + rotation;
             //rightRear = forward + side - rotation;
             //rightFront = forward - side - rotation;
             //leftFront = forward + side + rotation;
 
-            leftRear = forward + rotation - strafe;
+            leftRear = forward - rotation + strafe;
             rightRear = forward + rotation - strafe;
             rightFront = forward - rotation + strafe;
-            leftFront = forward - rotation + strafe;
+            leftFront = forward + rotation - strafe;
 
             // Normalize the values so neither exceed +/- 1.0
             /** Nick doesn't understand this. I'll work on it in a bit **/
@@ -117,11 +117,11 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
 //                rightRear /= max;
 //            }
 
-            // Output the safe vales to the motor drives.
+            // Output the safe vales to the motor drives
             goat.leftFront.setPower(leftFront);
-            goat.leftRear.setPower(leftRear);
+            goat.leftRear.setPower(-leftRear);
             goat.rightFront.setPower(rightFront);
-            goat.rightRear.setPower(rightRear);
+            goat.rightRear.setPower(-rightRear);
 
 
             // Send telemetry message to signify goat running;
