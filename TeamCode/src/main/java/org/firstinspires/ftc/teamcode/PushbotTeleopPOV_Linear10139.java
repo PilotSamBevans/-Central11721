@@ -89,7 +89,7 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             // In this mode the Left stick moves the goat fwd and back, the Right stick turns left and right.
             // This way it's also easy to just forward straight, or just turn.
             forward = -gamepad1.left_stick_y;
-            rotation = gamepad1.left_stick_x;
+            rotation = -gamepad1.left_stick_x;
             strafe = gamepad1.right_stick_x;
             //side = gamepad1.right_stick_x;
             strafe = gamepad1.right_stick_x;
@@ -119,9 +119,9 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
 
             // Output the safe vales to the motor drives
             goat.leftFront.setPower(leftFront);
-            goat.leftRear.setPower(-leftRear);
+            goat.leftRear.setPower(leftRear);
             goat.rightFront.setPower(rightFront);
-            goat.rightRear.setPower(-rightRear);
+            goat.rightRear.setPower(rightRear);
 
 
             // Send telemetry message to signify goat running;
