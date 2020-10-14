@@ -103,10 +103,10 @@ public class PushbotTeleopPOV_Linear10139 extends LinearOpMode {
             //rightFront = forward - side - rotation;
             //leftFront = forward + side + rotation;
 
-            leftRear = forward + rotation - strafe;
-            rightRear = forward + rotation - strafe;
-            rightFront = forward - rotation + strafe;
-            leftFront = forward - rotation + strafe;
+            leftRear = forward - rotation + strafe;
+            rightRear = forward - rotation + strafe;
+            rightFront = forward + rotation - strafe;
+            leftFront = forward + rotation - strafe;
 
             // Normalize the values so neither exceed +/- 1.0
             /** Nick doesn't understand this. I'll work on it in a bit **/
